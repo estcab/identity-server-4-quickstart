@@ -1,4 +1,5 @@
 ﻿using IdentityServer4.Models;
+using IdentityServer4.Test;
 using System.Collections.Generic;
 
 namespace IdentityServer.QuickStart.IdentityServer
@@ -10,21 +11,45 @@ namespace IdentityServer.QuickStart.IdentityServer
             yield return new ApiResource("api_1", "My API");
         }
 
-        public static IEnumerable<Client> GetClients()
+        public static List<Client> GetClients()
         {
-            yield return new Client
+            return new List<Client>
             {
-                ClientId = "client_1",
-
-                AllowedGrantTypes = GrantTypes.ClientCredentials,
-
-                ClientSecrets =
+                new Client
                 {
-                    new Secret("secret".Sha256())
+                    ClientId = "client_1",
+
+                    AllowedGrantTypes = GrantTypes.ClientCredentials,
+                    ClientSecrets =
+                    {
+                        new Secret("secret".Sha256())
+                    },
+
+                    AllowedScopes = { "api_1" }
                 },
 
-                AllowedScopes = { "api_1" }
+                new Client
+                {
+                    ClientId = "client_2",
 
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                    ClientSecrets =
+                    {
+                        new Secret("secret".Sha256())
+                    },
+
+                    AllowedScopes = { "api_1" }
+                },
+            };
+
+        }
+
+        public static List<TestUser> GetUsers()
+        {
+            return new List<TestUser>
+            {
+                new TestUser { SubjectId = "1", Username = "alice", Password = "password" },
+                new TestUser { SubjectId = "2", Username = "bob", Password = "password" }
             };
         }
     }
