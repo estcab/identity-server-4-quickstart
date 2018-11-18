@@ -4,6 +4,9 @@ using IdentityServer.QuickStart.WebClient.Models;
 using Microsoft.AspNetCore.Authorization;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using Newtonsoft.Json.Linq;
 
 namespace IdentityServer.QuickStart.WebClient.Controllers
 {
@@ -27,6 +30,20 @@ namespace IdentityServer.QuickStart.WebClient.Controllers
             ViewData["Message"] = "Your contact page.";
 
             return View();
+        }
+
+        public async Task<IActionResult> CallApiUsingUserAccessToken()
+        {
+            var accessToken = await HttpContext.GetTokenAsync("access_token");
+
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+                var content = await client.GetStringAsync("http://localhost:5001/api/identity");
+
+                return new JsonResult(JArray.Parse(content));
+            }
+
         }
 
         public async Task Logout()

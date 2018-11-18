@@ -1,4 +1,5 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -45,7 +46,16 @@ namespace IdentityServer.QuickStart.WebClient
                 options.RequireHttpsMetadata = false;
 
                 options.ClientId = "mvc";
+                options.ClientSecret = "secret";
+                options.ResponseType = "code id_token";
+
                 options.SaveTokens = true;
+                options.GetClaimsFromUserInfoEndpoint = true;
+
+                options.Scope.Add("api_1");
+                options.Scope.Add("offline_access");
+
+                options.ClaimActions.MapJsonKey("website", "website");
             });
         }
 
