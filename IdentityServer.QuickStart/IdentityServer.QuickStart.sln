@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.QuickStart.I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.QuickStart.API", "IdentityServer.QuickStart.API\IdentityServer.QuickStart.API.csproj", "{09C46AF0-884C-4DF2-8B40-1FC29A2442EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.QuickStart.Client", "IdentityServer.QuickStart.Client\IdentityServer.QuickStart.Client.csproj", "{9548022D-3B83-4D39-8FE2-F4EDFF572116}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{09C46AF0-884C-4DF2-8B40-1FC29A2442EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09C46AF0-884C-4DF2-8B40-1FC29A2442EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09C46AF0-884C-4DF2-8B40-1FC29A2442EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9548022D-3B83-4D39-8FE2-F4EDFF572116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9548022D-3B83-4D39-8FE2-F4EDFF572116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9548022D-3B83-4D39-8FE2-F4EDFF572116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9548022D-3B83-4D39-8FE2-F4EDFF572116}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
