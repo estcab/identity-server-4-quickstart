@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.QuickStart.IdentityServer", "IdentityServer.QuickStart.IdentityServer\IdentityServer.QuickStart.IdentityServer.csproj", "{4427F75E-36E3-426C-B8CE-BDEF8F767F46}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer.QuickStart.API", "IdentityServer.QuickStart.API\IdentityServer.QuickStart.API.csproj", "{09C46AF0-884C-4DF2-8B40-1FC29A2442EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4427F75E-36E3-426C-B8CE-BDEF8F767F46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4427F75E-36E3-426C-B8CE-BDEF8F767F46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4427F75E-36E3-426C-B8CE-BDEF8F767F46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09C46AF0-884C-4DF2-8B40-1FC29A2442EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09C46AF0-884C-4DF2-8B40-1FC29A2442EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09C46AF0-884C-4DF2-8B40-1FC29A2442EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09C46AF0-884C-4DF2-8B40-1FC29A2442EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
